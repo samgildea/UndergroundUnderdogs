@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "../images/logoedited.png";
 import Container from "@material-ui/core/Container";
@@ -204,6 +204,12 @@ function Header() {
   const [search, setSearch] = useState(false);
 
   const searchInput = useRef(null);
+
+
+  useEffect(() => {
+    searchInput.current.focus();
+  })
+
 
   const searchButton = () => {
     setSearch(!search);
