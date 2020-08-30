@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "../images/logoedited.png";
 import Container from "@material-ui/core/Container";
+import dimensions from "../style/Dimensions";
 
 const HeaderContainer = styled.div`
   width: 100%;
@@ -24,6 +25,19 @@ const HeaderContainer = styled.div`
     padding-top: 50px;
     display: inline-block;
   }
+
+  @media screen and (max-width: ${dimensions.tabletPortraitUp}px) {
+    ul {
+      display: none;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+
 `;
 
 const Links = styled.div`
@@ -51,6 +65,13 @@ const Links = styled.div`
   }
   a:hover {
     color: red;
+  }
+
+  @media screen and (max-width: ${dimensions.tabletPortraitUp}px) {
+    ul, li, a {
+      display: none;
+    }
+    
   }
 `;
 
@@ -205,11 +226,9 @@ function Header() {
 
   const searchInput = useRef(null);
 
-
   useEffect(() => {
     searchInput.current.focus();
-  })
-
+  });
 
   const searchButton = () => {
     setSearch(!search);
