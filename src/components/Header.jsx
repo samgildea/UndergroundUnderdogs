@@ -237,6 +237,7 @@ const BottomBar = styled.div`
   background-color: #fff;
   bottom: 0;
 
+  z-index: 3;
   .menu-icon {
     left: 2rem;
     position: absolute;
