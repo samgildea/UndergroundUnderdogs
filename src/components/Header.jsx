@@ -231,7 +231,7 @@ const SearchOverlay = styled.div`
 `;
 
 const BottomBar = styled.div`
-  height: 4rem;
+  height: 3.2rem;
   width: 100vw;
   position: fixed;
   background-color: #fff;
@@ -241,20 +241,20 @@ const BottomBar = styled.div`
   .menu-icon {
     left: 2rem;
     position: absolute;
-    padding: 0.8rem;
+    padding: 0.6rem;
   }
 
   .search-icon {
     right: 2rem;
     position: absolute;
-    padding: 0.8rem;
+    padding: 0.6rem;
   }
   svg {
     margin: 0px;
     padding: 0px;
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     margin-bottom: 0.95rem;
     fill: #5e5e5e;
     transition: fill 0.15s;
@@ -287,7 +287,7 @@ function Header() {
             <form>
               <input ref={searchInput} type="text" placeholder="Search" />
               <div onClick={() => setSearch(!search)}>
-                <svg class="close" viewBox="0 0 21.3 19.5">
+                <svg className="close" viewBox="0 0 21.3 19.5">
                   <g>
                     <path d="M17.8,3.7L4.6,16.9c-0.3,0.3-0.8,0.3-1.1,0c-0.3-0.3-0.3-0.8,0-1.1L16.7,2.6c0.3-0.3,0.8-0.3,1.1,0C18.1,2.9,18.1,3.4,17.8,3.7z"></path>
                     <path d="M16.7,16.9L3.5,3.7c-0.3-0.3-0.3-0.8,0-1.1s0.8-0.3,1.1,0l13.2,13.2c0.3,0.3,0.3,0.8,0,1.1C17.5,17.2,17,17.2,16.7,16.9z"></path>
@@ -299,9 +299,9 @@ function Header() {
         </SearchWindow>
 
         <SubPanelButtons>
-          <ul class="subpanel-triggers">
-            <li class="menu-trigger subpanel-triggers__item">
-              <svg class="menu-icon" x="0px" y="0px" viewBox="0 0 21.3 19.5">
+          <ul className="subpanel-triggers">
+            <li className="menu-trigger subpanel-triggers__item">
+              <svg className="menu-icon" x="0px" y="0px" viewBox="0 0 21.3 19.5">
                 <g>
                   <path d="M20,10.6H1.3c-0.4,0-0.8-0.3-0.8-0.8s0.3-0.8,0.8-0.8H20c0.4,0,0.8,0.3,0.8,0.8S20.4,10.6,20,10.6z"></path>
                   <path d="M20,18.9H1.3c-0.4,0-0.8-0.3-0.8-0.8s0.3-0.8,0.8-0.8H20c0.4,0,0.8,0.3,0.8,0.8S20.4,18.9,20,18.9z"></path>
@@ -309,37 +309,37 @@ function Header() {
                 </g>
               </svg>
             </li>
-            <li class="subpanel-triggers__item" onClick={() => searchButton()}>
-              <svg class="search-icon" x="0px" y="0px" viewBox="0 0 20.2 20.6">
+            <li className="subpanel-triggers__item" onClick={() => searchButton()}>
+              <svg className="search-icon" x="0px" y="0px" viewBox="0 0 20.2 20.6">
                 <path d="M19.5,18.8l-6-6c1.1-1.3,1.8-3,1.8-4.8c0-4.1-3.3-7.4-7.4-7.4S0.6,4,0.6,8s3.3,7.4,7.4,7.4 c1.7,0,3.3-0.6,4.5-1.6l6,6c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2C19.8,19.6,19.8,19.1,19.5,18.8z M8,14c-0.1,0-0.2,0-0.3,0 l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1s-0.8-0.3-1.1,0l-3.8,3.8c-0.6-0.2-1.1-0.5-1.6-0.9L10,7.1c0.3-0.3,0.3-0.8,0-1.1S9.2,5.7,8.9,6 l-5.6,5.6c-0.4-0.5-0.7-1-0.9-1.6l3.8-3.8c0.3-0.3,0.3-0.8,0-1.1s-0.8-0.3-1.1,0L2.1,8.3c0-0.1,0-0.2,0-0.3c0-3.3,2.7-5.9,5.9-5.9 s5.9,2.7,5.9,5.9S11.2,14,8,14z"></path>
               </svg>
             </li>
-            <li class="subpanel-triggers__item subpanel-triggers__item--player">
+            <li className="subpanel-triggers__item subpanel-triggers__item--player">
               <svg
-                class="player-icon"
+                className="player-icon"
                 x="0px"
                 y="0px"
                 viewBox="22.7 152.8 566.6 486.4"
               >
                 <path
-                  class="headband"
+                  className="headband"
                   d="M481,369.3c10.7,0,21.4-8,21.4-21.4c0-106.9-88.2-195.1-195.1-195.1S109.6,241,109.6,347.9c0,10.7,8,21.4,21.4,21.4c13.4,0,21.4-8,21.4-21.4c0-85.5,69.5-155,155-155s155,69.5,155,155C462.3,358.6,470.4,369.3,481,369.3z"
                 ></path>
                 <g>
                   <path
-                    class="button-fg"
+                    className="button-fg"
                     d="M159,422.7c0-10.7-10.7-18.7-18.7-18.7c-64.1,0-117.6,53.4-117.6,117.6s53.4,117.6,117.6,117.6h24.1l0,0c10.7,0,21.4-8,21.4-21.4c0-2.7,0-5.3,0-8L159,422.7z"
                   ></path>
                   <path
-                    class="button-bg"
+                    className="button-bg"
                     d="M137.6,599.1c-42.8,0-77.5-34.7-77.5-77.5c0-37.4,26.7-66.8,58.8-74.8L137.6,599.1L137.6,599.1z"
                   ></path>
                   <path
-                    class="button-fg"
+                    className="button-fg"
                     d="M471.7,404c-10.7,0-18.7,8-18.7,18.7l-26.7,192.4c0,5.3,0,10.7,5.3,16c5.3,5.3,8,8,16,8h24.1c64.1,0,117.6-53.4,117.6-117.6C586.6,457.4,535.8,404,471.7,404z"
                   ></path>
                   <path
-                    class="button-bg"
+                    className="button-bg"
                     d="M471.7,599.1L471.7,599.1l18.7-152.3c34.7,8,58.8,37.4,58.8,74.8C546.5,564.3,511.8,599.1,471.7,599.1z"
                   ></path>
                 </g>
@@ -348,27 +348,27 @@ function Header() {
           </ul>
         </SubPanelButtons>
         <ShareLinks>
-          <ul class="share-module__primary">
+          <ul className="share-module__primary">
             <li>
               <a
-                class="share-module__primary-btn"
+                className="share-module__primary-btn"
                 href="https://facebook.com/pitchfork"
                 rel="nofollow noopener noreferrer"
                 target="_blank"
               >
                 <svg x="0px" y="0px" viewBox="0 0 41 41">
                   <circle
-                    class="ring"
+                    className="ring"
                     fill="none"
-                    stroke-miterlimit="10"
+                    strokeMiterlimit="10"
                     cx="20.5"
                     cy="20.5"
                     r="20"
                   ></circle>
                   <path
-                    class="fb-mark mark"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    className="fb-mark mark"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M24,13c0,0.9,0,2.4,0,2.4s-1.8-0.2-2.2,0.5c-0.2,0.4-0.1,1.5-0.1,2.2c0.8,0,1.6,0,2.4,0c-0.2,0.9-0.3,1.5-0.5,2.3c-0.7,0-1.9,0-1.9,0V28c0,0-2.2,0-3.3,0c0-2.3,0-5,0-7.5c-0.5,0-0.9,0-1.4,0c0-0.9,0-1.5,0-2.4c0.5,0,0.9,0,1.4,0c0.1-1.7,0.1-3.4,1-4.3C20.3,12.9,21.2,13,24,13z"
                   ></path>
                 </svg>
@@ -376,24 +376,24 @@ function Header() {
             </li>
             <li>
               <a
-                class="share-module__primary-btn"
+                className="share-module__primary-btn"
                 href="https://twitter.com/pitchfork"
                 rel="nofollow noopener noreferrer"
                 target="_blank"
               >
-                <svg class="twitter-button" x="0px" y="0px" viewBox="0 0 41 41">
+                <svg className="twitter-button" x="0px" y="0px" viewBox="0 0 41 41">
                   <circle
-                    class="ring"
+                    className="ring"
                     fill="none"
-                    stroke-miterlimit="10"
+                    strokeMiterlimit="10"
                     cx="20.5"
                     cy="20.5"
                     r="20"
                   ></circle>
                   <path
-                    class="twitter-mark mark"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    className="twitter-mark mark"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M23.8,14.6c1.2,0,1.8,0.4,2.4,1c0.5,0,1.2-0.3,1.6-0.5c0.1-0.1,0.3-0.1,0.4-0.2c-0.2,0.6-0.5,1.1-1,1.4c-0.1,0.1-0.2,0.2-0.3,0.2c0,0,0,0,0,0c0.7,0,1.2-0.3,1.7-0.5c0,0,0,0,0,0c-0.3,0.4-0.6,0.9-1,1.2c-0.2,0.1-0.3,0.3-0.5,0.4c0,0.7,0,1.4-0.1,1.9c-0.8,3.4-2.8,5.7-5.9,6.7c-1.1,0.4-3,0.5-4.3,0.2c-0.6-0.2-1.2-0.3-1.8-0.6c-0.3-0.1-0.6-0.3-0.9-0.4c-0.1-0.1-0.2-0.1-0.3-0.2c0.3,0,0.6,0.1,1,0c0.3,0,0.6,0,0.9-0.1c0.7-0.2,1.3-0.3,1.8-0.7c0.3-0.1,0.6-0.3,0.8-0.5c-0.3,0-0.6-0.1-0.9-0.2c-1-0.3-1.6-1-1.9-1.9c0.3,0,1.2,0.1,1.4-0.1c-0.4,0-0.7-0.2-1-0.4c-0.8-0.5-1.4-1.3-1.4-2.6c0.1,0,0.2,0.1,0.3,0.1c0.2,0.1,0.4,0.1,0.6,0.2c0.1,0,0.3,0.1,0.4,0c0,0,0,0,0,0c-0.2-0.2-0.4-0.3-0.6-0.5c-0.5-0.6-1-1.6-0.7-2.8c0.1-0.3,0.2-0.6,0.3-0.8c0,0,0,0,0,0c0.1,0.1,0.2,0.2,0.3,0.3c0.3,0.3,0.6,0.6,0.9,0.9c1.1,0.9,2.1,1.4,3.7,1.8c0.4,0.1,0.9,0.2,1.4,0.2c-0.1-0.4-0.1-1,0-1.4c0.3-1,0.9-1.7,1.7-2c0.2-0.1,0.4-0.2,0.7-0.2C23.5,14.6,23.7,14.6,23.8,14.6z"
                   ></path>
                 </svg>
@@ -401,22 +401,22 @@ function Header() {
             </li>
             <li>
               <a
-                class="share-module__primary-btn"
+                className="share-module__primary-btn"
                 href="https://www.instagram.com/pitchfork/"
                 rel="nofollow noopener noreferrer"
                 target="_blank"
               >
                 <svg x="0px" y="0px" viewBox="0 0 41 41">
                   <circle
-                    class="ring"
+                    className="ring"
                     fill="none"
-                    stroke-miterlimit="10"
+                    strokeMiterlimit="10"
                     cx="20.5"
                     cy="20.5"
                     r="20"
                   ></circle>
                   <path
-                    class="instagram-mark mark"
+                    className="instagram-mark mark"
                     d="M26.1,13.1H14.9c-1,0-1.9,0.8-1.9,1.9v11.3c0,1,0.8,1.9,1.9,1.9h11.1c1,0,1.9-0.8,1.9-1.9V15C27.9,13.9,27.1,13.1,26.1,13.1z M23.6,20.6c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.1-1.4-3.1-3.1c0-0.5,0.1-1,0.3-1.4c0.5-1,1.5-1.7,2.7-1.7c1.2,0,2.2,0.7,2.7,1.7C23.4,19.6,23.6,20.1,23.6,20.6z M26.3,25.7c0,0.4-0.3,0.8-0.8,0.8h-9.9c-0.4,0-0.8-0.3-0.8-0.8v-6.5h1.3c-0.1,0.4-0.2,0.9-0.2,1.4c0,2.6,2.1,4.6,4.6,4.6c2.6,0,4.6-2.1,4.6-4.6c0-0.5-0.1-1-0.2-1.4h1.3L26.3,25.7L26.3,25.7z M26.3,16.8c0,0.4-0.3,0.8-0.8,0.8h-1.2c-0.4,0-0.8-0.3-0.8-0.8v-1.3c0-0.3,0.2-0.6,0.5-0.7h1.4c0.4,0,0.8,0.3,0.8,0.8L26.3,16.8L26.3,16.8z"
                   ></path>
                 </svg>
@@ -455,7 +455,7 @@ function Header() {
 
       <BottomBar>
         <Container>
-          <svg class="menu-icon" x="0px" y="0px" viewBox="0 0 21.3 19.5">
+          <svg className="menu-icon" x="0px" y="0px" viewBox="0 0 21.3 19.5">
             <g>
               <path d="M20,10.6H1.3c-0.4,0-0.8-0.3-0.8-0.8s0.3-0.8,0.8-0.8H20c0.4,0,0.8,0.3,0.8,0.8S20.4,10.6,20,10.6z"></path>
               <path d="M20,18.9H1.3c-0.4,0-0.8-0.3-0.8-0.8s0.3-0.8,0.8-0.8H20c0.4,0,0.8,0.3,0.8,0.8S20.4,18.9,20,18.9z"></path>
@@ -465,7 +465,7 @@ function Header() {
 
           {search ? (
             <div onClick={() => setSearch(!search)}>
-              <svg class="search-icon" viewBox="0 0 21.3 19.5">
+              <svg className="search-icon" viewBox="0 0 21.3 19.5">
                 <g>
                   <path d="M17.8,3.7L4.6,16.9c-0.3,0.3-0.8,0.3-1.1,0c-0.3-0.3-0.3-0.8,0-1.1L16.7,2.6c0.3-0.3,0.8-0.3,1.1,0C18.1,2.9,18.1,3.4,17.8,3.7z"></path>
                   <path d="M16.7,16.9L3.5,3.7c-0.3-0.3-0.3-0.8,0-1.1s0.8-0.3,1.1,0l13.2,13.2c0.3,0.3,0.3,0.8,0,1.1C17.5,17.2,17,17.2,16.7,16.9z"></path>
@@ -475,7 +475,7 @@ function Header() {
           ) : (
             <svg
               onClick={() => setSearch(!search)}
-              class="search-icon"
+              className="search-icon"
               x="0px"
               y="0px"
               viewBox="0 0 20.2 20.6"
